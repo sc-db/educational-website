@@ -25,7 +25,7 @@
     }
   </style>
   <!-- Custom styles for this template -->
-  
+
 </head>
 <body>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
@@ -62,13 +62,19 @@
       <!-- Example row of columns -->
       <div class = "row">
       {% for courses in all_course_items.all %}
-        <div class="col-md-4">
+        <div style="position: center; width:348px; height: 500px" class="col-md-4">
 
           <h2>{{courses.title}}</h2>
-
-          <p>{{courses.summary}} </p>
+          <div style="position: center; width:auto; height: auto;; overflow:hidden">
+            <img class="card-img-top" src="{{ courses.image.url }}" />
+          </div>
+          <span class="align-text-bottom">
+          <h6>
+            <div class="pt-5">{{courses.summary|safe}}</div>
+          </h6>
           <p><a class="btn btn-secondary" href="{% url 'individual_course' courses.id %}" role="button">View details &raquo;</a></p>
-        </div>
+        </span>
+      </div>
       {% endfor %}
     </div>
 

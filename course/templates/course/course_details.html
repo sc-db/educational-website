@@ -26,7 +26,7 @@
       }
     </style>
     <!-- Custom styles for this template -->
-  
+
   </head>
   <body class="text-center">
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
@@ -59,7 +59,11 @@
   <main role="main" class="inner cover">
     <h1 class="cover-heading">{{detailcourse.title}}</h1>
     <img src="{{ detailcourse.image.url }}" class="rounded img-fluid mx-auto" alt="{{detailcourse.title}}">
-    <p class="lead">{{detailcourse.text}}</p>
+    <p class="lead">
+      <div class="container text-left">
+        {{detailcourse.text|safe}}
+      </div>
+    </p>
   </main>
 
   <footer class="mastfoot mt-auto">

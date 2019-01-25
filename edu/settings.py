@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'ckeditor',
     'allcourses.apps.AllcoursesConfig',
     'course.apps.CourseConfig',
     'django.contrib.admin',
